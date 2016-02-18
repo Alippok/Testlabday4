@@ -78,6 +78,12 @@ class TestFriends < MiniTest::Test
     assert_equal(false, result)
   end
 
+
+  def test_add_friend()
+    result = add_friend(@person4, "Garry", "John", "Bob", "Kerry")
+    array= ["Rick", "Jay", "Marc", "Garry","John", "Bob", "Kerry" ]
+    assert_equal(array, result)
+  end
 end
 
 

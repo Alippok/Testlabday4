@@ -27,3 +27,12 @@ def favourite_food(person, food)
   end
   return false
 end
+
+def add_friend(person, *new_friend)
+  array = person[:friends]
+  final_array = array.push(new_friend)
+  
+  return final_array.flatten
+end
+
+
