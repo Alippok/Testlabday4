@@ -73,7 +73,10 @@ class TestFriends < MiniTest::Test
     assert_equal("Scrubs", result)
   end
 
-
+  def test_favourite_food()
+    result = favourite_food(@person3, "pizza")
+    assert_equal(false, result)
+  end
 
 end
 

@@ -16,3 +16,14 @@ tv_show = person[:favourites][:tv_show]
 return tv_show
 
 end
+
+
+def favourite_food(person, food)
+  array = person[:favourites][:things_to_eat]
+  for i in array
+    if i == food
+      return true
+    end
+  end
+  return false
+end
