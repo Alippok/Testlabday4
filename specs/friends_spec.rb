@@ -95,8 +95,19 @@ class TestFriends < MiniTest::Test
     result = add_money(@person1, @person2, @person3, @person4, @person5, :monies)
     assert_equal(143, result)
   end
+
+  # def test_loan_money
+  #   result = loan_money(@person5, @person2, 20)
+  #   assert_equal(22, result)
+  # end
+
+  def test_1st_loan
+    test_friend1 = @person1
+    test_friend2 = @person5
+    string= "#{test_friend1[:name]}'s balance is now £#{test_friend1[:monies]} and #{test_friend2[:name]}'s balance is now £#{test_friend2[:monies]}"#The logic works as the results show amounts have changed
+    result = loan_money(test_friend1, test_friend2, 12)#However, we are still tinkering with creating a 
+    assert_equal( string, result)#dynamic test.
+  end
+
+
 end
-
-
-
-

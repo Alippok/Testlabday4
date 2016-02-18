@@ -56,6 +56,16 @@ return counter
 
 end
 
+def loan_money(person_1, person_2, amount)
+  new_balance1 = person_1[:monies] - amount
+  person_1[:monies] = new_balance1
+  
+  new_balance2 = person_2[:monies] + amount
+  person_2[:monies] = new_balance2
+
+return "#{person_1[:name]}'s balance is now £#{person_1[:monies]} and #{person_2[:name]}'s balance is now £#{person_2[:monies]}"
+end
+
 
 
   
