@@ -84,6 +84,17 @@ class TestFriends < MiniTest::Test
     array= ["Rick", "Jay", "Marc", "Garry","John", "Bob", "Kerry" ]
     assert_equal(array, result)
   end
+
+  def test_remove_friend()
+    result = remove_friend(@person1, "Keith")
+    array = ["Jay", "Marc", "Val"]
+    assert_equal(array, result)
+  end
+
+  def test_add_money()
+    result = add_money(@person1, @person2, @person3, @person4, @person5, :monies)
+    assert_equal(143, result)
+  end
 end
 
 

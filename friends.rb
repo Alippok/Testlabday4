@@ -31,8 +31,35 @@ end
 def add_friend(person, *new_friend)
   array = person[:friends]
   final_array = array.push(new_friend)
-  
   return final_array.flatten
 end
+
+def remove_friend(person, new_friend)
+  array = person[:friends]
+    for friend in array
+      if friend == new_friend
+          #wanting to leave possiblity of deleting multiple friends
+        array.delete(new_friend)
+        return array
+      end
+    end
+    return false
+end
+
+def add_money(*person, key)
+counter = 0
+for i in person
+  counter += i[key]
+end
+
+return counter
+
+end
+
+
+
+  
+
+
 
 
