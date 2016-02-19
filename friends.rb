@@ -51,9 +51,7 @@ counter = 0
 for i in person
   counter += i[key]
 end
-
 return counter
-
 end
 
 def loan_money(person_1, person_2, amount)
@@ -66,10 +64,20 @@ def loan_money(person_1, person_2, amount)
 return "#{person_1[:name]}'s balance is now £#{person_1[:monies]} and #{person_2[:name]}'s balance is now £#{person_2[:monies]}"
 end
 
+def set_fav_food(people)
+  # food = people[:favourites][:things_to_eat]
+  # food_fav = "#{food[0]}," + " " "#{food[1]}"
+
+  food = people[:favourites][:things_to_eat]
+  food_fav = "#{food[0]}, #{food[1]}"
+  disp_food_fav = "#{people[:name]}: #{food_fav}"
+end
+
+
+
 
 
   
-
 
 
 

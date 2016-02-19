@@ -102,12 +102,28 @@ class TestFriends < MiniTest::Test
   # end
 
   def test_1st_loan
-    test_friend1 = @person1
-    test_friend2 = @person5
-    string= "#{test_friend1[:name]}'s balance is now £#{test_friend1[:monies]} and #{test_friend2[:name]}'s balance is now £#{test_friend2[:monies]}"#The logic works as the results show amounts have changed
-    result = loan_money(test_friend1, test_friend2, 12)#However, we are still tinkering with creating a 
-    assert_equal( string, result)#dynamic test.
+    test_friend1 = @person2
+    test_friend2 = @person4
+    # string= "#{test_friend1[:name]}'s balance is now £#{test_friend1[:monies]} and #{test_friend2[:name]}'s balance is now £#{test_friend2[:monies]}"#The logic works as the results show amounts have changed
+    result = loan_money(test_friend1, test_friend2, 2)#However, we are still tinkering with creating a 
+    assert_equal( "Jay's balance is now £0 and Keith's balance is now £22" , result)#dynamic test.
   end
 
+def test_set_fav_food()
+  result = set_fav_food(@person2)
+  assert_equal("soup, bread", result)
+end
+
+def test_set_fav_food()
+  result = set_fav_food(@person3)
+  assert_equal("Val: ratatouille, stew", result)
+end
 
 end
+
+
+
+
+
+
+
